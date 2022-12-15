@@ -1,16 +1,18 @@
 import {InferActionTypes} from "../Store";
 
 type NewsType = {
-    title: string
+    upperTitle: string
+    downTitle?: string
     img: string
-    button: "btnArrow" | "btnBuy"
+    button: "btnArrow" | "btnBuy" | null
+    status: "MiniBoard" | "Board" | "SuperBoard"
 }
 type InitialStateType = typeof initialState;
 type ActionTypes = InferActionTypes<typeof action>
 const initialState = {
     isLoading: true,
     news:[
-        {title: "Hello world!" , img: ""}
+        {upperTitle: "World of Hearing Technology" , img: "", status: "Board", button: "btnArrow", downTitle:"View our blog"}
     ] as Array<NewsType>
 }
 

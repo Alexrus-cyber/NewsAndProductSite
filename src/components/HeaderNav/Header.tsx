@@ -3,7 +3,8 @@ import {NavLink} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 export const Header = () => {
-    const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState<boolean>(false);
+
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
@@ -12,9 +13,7 @@ export const Header = () => {
                 setScrolled(false);
             }
         }
-
         window.addEventListener("scroll", onScroll);
-
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
 

@@ -9,7 +9,7 @@ import Preloader from "./Common/Preloader";
 
 function App() {
     const dispatch = useAppDispatch();
-    const [time, setTime] = useState(0);
+    const [time, setTime] = useState<number>(0);
     let {isLoading} = useAppSelector(state => state.main)
     useEffect(() => {
         const x = setTimeout(() => setTime(time + 1), 1000)
