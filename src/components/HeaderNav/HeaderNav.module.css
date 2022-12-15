@@ -1,0 +1,125 @@
+
+root {
+    --black: #333;
+    --white: #fff;
+}
+
+.dark{
+    --black: #fff;
+    --white: #333;
+}
+.light{
+    --black: #333;
+    --white: #fff;
+}
+.header{
+    position: fixed;
+    height: 8%;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerScrolled {
+    position: fixed;
+    height: 8%;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #262626;
+    transition: 0.5s;
+}
+
+.container{
+    width: 100em;
+    height: 90%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+}
+
+.navigateButtonsContainer {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.registerButtonsContainer{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ButtonsContainerReg{
+    padding: 15px;
+    background: #dfe1e5;
+    border-radius: 10px;
+}
+
+.signUp {
+    padding: 10px 40px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: #262626;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+    text-decoration: none;
+}
+.logIn{
+    padding: 10px 40px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #000;
+    font-weight: 500;
+    font-size: 1em;
+    border: none;
+    text-decoration: none;
+}
+.buttonClose{
+    background: var(--black);
+    border: none;
+    border-radius: 25px;
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.buttonClose:hover{
+    background-color: #484848;
+}
+.link {
+    position: relative;
+    color: var(--black);
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+.link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    background-color: var(--black);
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+}
+.link:hover::after{
+    width: 100%;
+}
