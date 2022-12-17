@@ -29,7 +29,7 @@ export const SuperBoard = () => {
                                 <p style={{fontWeight: 700}}>All products</p>
                             </NavLink>
                             <div className={styles.icon}>
-                                <NavLink className={styles.icon} style={{borderLeft:"none"}} to={"/"}>
+                                <NavLink className={styles.icon} style={{borderLeft: "none"}} to={"/"}>
                                     <img className={styles.iconCart} src={cart} alt={"iconF"}></img>
                                 </NavLink>
                             </div>
