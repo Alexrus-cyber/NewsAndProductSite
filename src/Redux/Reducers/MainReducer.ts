@@ -1,37 +1,100 @@
 import {InferActionTypes} from "../Store";
-import {IMiniBoard, INews, ISuperBoard} from "../../Types/Types";
-import arrow from "../../assets/img/arrow.png"
+import {IBlock, IBoard} from "../../Types/Types";
+import iphone from "../../assets/img/iPhone.png"
+import macbook from "../../assets/img/macbook.png"
 
 type InitialStateType = typeof initialState;
 type ActionTypes = InferActionTypes<typeof action>
+
+
 const initialState = {
     isLoading: true,
-    news: {
-        superBoard: {} as ISuperBoard,
-        board: {} as ISuperBoard,
-        miniBoard: {} as IMiniBoard
-    } as INews,
+    block: {
+        id: 0,
+        dataBoard: [
+            {
+                upperTitle: "Discover our history",
+                button: "btnArrow",
+                downTitle: "About us",
+                colorScheme: "Purple",
+                id: 1,
+                nameBoard: "miniBoard"
+            },
+            {
+                upperTitle: "Have some questions?",
+                button: "btnArrow",
+                downTitle: "Contact us",
+                colorScheme: "Green",
+                id: 2,
+                nameBoard: "miniBoard"
+            },
+            {
+                upperTitle: "There is something else for you",
+                id: 3,
+                nameBoard: "superBoard",
+                img: iphone,
+            },
+        ] as Array<IBoard>
+    }as IBlock,
+    dataBlock: [
+        {
+            id: 1,
+            dataBoard: [
+                {
+                    upperTitle: "Discover our history",
+                    button: "btnArrow",
+                    downTitle: "About us",
+                    colorScheme: "Purple",
+                    id: 1,
+                    nameBoard: "miniBoard"
+                },
+                {
+                    upperTitle: "Have some questions?",
+                    button: "btnArrow",
+                    downTitle: "Contact us",
+                    colorScheme: "Green",
+                    id: 2,
+                    nameBoard: "miniBoard"
+                },
+                {
+                    upperTitle: "There is something else for you",
+                    id: 3,
+                    nameBoard: "superBoard",
+                    img: iphone,
+                },
+            ],
+        },
+        {
+            id: 2,
+            dataBoard: [
+                {
+                    upperTitle: "Im so Good",
+                    button: "btnArrow",
+                    downTitle: "Hello",
+                    colorScheme: "Green",
+                    id: 1,
+                    nameBoard: "miniBoard"
+                },
+                {
+                    upperTitle: "We are champions",
+                    button: "btnArrow",
+                    downTitle: "Check it",
+                    colorScheme: "Purple",
+                    id: 2,
+                    nameBoard: "miniBoard"
+                },
+                {
+                    upperTitle: "You want to buy mac with sell?",
+                    id: 3,
+                    nameBoard: "superBoard",
+                    img: macbook,
+                },
+            ],
+        }
+    ] as Array<IBlock>,
     idCounterSuperBoard: 1,
     idCounterBoard: 0,
     idCounterMiniBoard: 1,
-    data: [
-        {
-            upperTitle: "Discover our history",
-            img: arrow,
-            button: "btnArrow",
-            downTitle: "About us",
-            colorScheme: "Purple",
-            id: 1
-        },
-        {
-            upperTitle: "Have some questions?",
-            img: arrow,
-            button: "btnArrow",
-            downTitle: "Contact us",
-            colorScheme: "Green",
-            id: 2
-        },
-    ] as Array<IMiniBoard>
 }
 
 

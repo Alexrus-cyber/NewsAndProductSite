@@ -2,20 +2,30 @@ import styles from "./Landing.module.css"
 import {SuperBoard} from "./SuperBoard/SuperBoard";
 import {Board} from "./Board/Board";
 import {MiniBoard} from "./MiniBoard/MiniBoard";
-import {IMiniBoard} from "../../Types/Types";
+import {IBoard} from "../../Types/Types";
 import {FC} from "react";
 
 export interface IPropsLanding {
-    miniBoard: IMiniBoard,
-    data: Array<IMiniBoard>
+    data: Array<IBoard>
+}
+export interface IPropsBoard {
+    id: number
+    upperTitle: string
+    downTitle?: string
+    img?: string
+    button?: "btnArrow" | "btnBuy" | null
+    colorScheme?: "Green" | "Purple" | null;
 }
 
-export const Landing: FC<IPropsLanding> = ({miniBoard, data}) => {
+export const Landing: FC<IPropsLanding> = ({data}) => {
     return (
         <div className={styles.land}>
             <div className={styles.container}>
                 <div className={styles.left}>
-                    <SuperBoard/>
+                    {data.filter((el)=> el.nameBoard === "superBoard").map((el) => <SuperBoard img={el.img} colorScheme={el.colorScheme}
+                                                                                             upperTitle={el.upperTitle} button={el.button} id={el.id}
+                                                                                             downTitle={el.downTitle} key={el.id}/>)}
+
                 </div>
                 <div className={styles.right}>
                     <div className={styles.boardContainer}>
@@ -30,9 +40,9 @@ export const Landing: FC<IPropsLanding> = ({miniBoard, data}) => {
                             borderRadius: 50,
                             columnGap: 20
                         }}>
-                            {data.map((el) => <MiniBoard img={el.img} colorScheme={el.colorScheme}
+                            {data.filter((el)=> el.nameBoard === "miniBoard").map((el) => <MiniBoard img={el.img} colorScheme={el.colorScheme}
                                                          upperTitle={el.upperTitle} button={el.button} id={el.id}
-                                                         downTitle={el.downTitle} key={el.id} miniBoard={miniBoard}/>)}
+                                                         downTitle={el.downTitle} key={el.id}/>)}
                         </div>
                     </div>
                 </div>

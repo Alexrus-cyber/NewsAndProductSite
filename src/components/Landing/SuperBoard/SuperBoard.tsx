@@ -1,15 +1,15 @@
-import React from "react";
+import React, {FC} from "react";
 import styles from "./SuperBoard.module.css";
 import {NavLink} from "react-router-dom";
 import cart from "../../../assets/img/telega.png";
-import iphone from "../../../assets/img/iPhone.png";
+import {IPropsBoard} from "../Landing";
 
-export const SuperBoard = () => {
+export const SuperBoard: FC<IPropsBoard> = (props) => {
     return (
         <div className={styles.superBoard}>
             <div className={styles.title}>
                 <h1 className={styles.title1}>
-                    There is something else for you
+                    {props.upperTitle}
                 </h1>
             </div>
             <div className={styles.downCont}>
@@ -37,7 +37,7 @@ export const SuperBoard = () => {
                     </div>
                 </div>
                 <div className={styles.iphone}>
-                    <img className={styles.img} src={iphone} alt={"F"}></img>
+                    <img className={styles.img} src={props.img} alt={"F"}></img>
                 </div>
             </div>
         </div>

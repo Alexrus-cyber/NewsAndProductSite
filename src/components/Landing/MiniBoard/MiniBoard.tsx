@@ -1,18 +1,11 @@
 import React, {FC} from "react";
 import styles from "./MiniBoard.module.css";
-import {IMiniBoard} from "../../../Types/Types";
+import Arrow from "../../../assets/img/arrow.png"
+import {IPropsBoard} from "../Landing";
 
-interface PropsType {
-    id: number
-    upperTitle: string
-    downTitle?: string
-    img: string
-    button: "btnArrow" | "btnBuy" | null
-    colorScheme: "Green" | "Purple";
-    miniBoard: IMiniBoard
-}
 
-export const MiniBoard: FC<PropsType> = (props) => {
+
+export const MiniBoard: FC<IPropsBoard> = (props) => {
     const color = props.colorScheme;
 
     return (
@@ -26,7 +19,8 @@ export const MiniBoard: FC<PropsType> = (props) => {
                     </div>
                     <div style={{width: 175}}>
                         <div className={styles.upperArrow}>
-                            <img className={styles.img} src={props.img} alt={"arrow"}></img>
+                            {props.button === "btnArrow" ? <img className={styles.img} src={Arrow} alt={"arrow"}/> :
+                                <img className={""} src={props.img} alt={"notArrow"}/>}
                         </div>
                     </div>
 
