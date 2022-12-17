@@ -1,5 +1,5 @@
 
-root {
+:root {
     --black: #333;
     --white: #fff;
 }
@@ -21,6 +21,7 @@ root {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 .headerScrolled {
     position: fixed;
@@ -33,6 +34,7 @@ root {
     color: white;
     background-color: #262626;
     transition: 0.5s;
+    z-index: 1000;
 }
 
 .container{
@@ -64,6 +66,7 @@ root {
     padding: 15px;
     background: #dfe1e5;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 .signUp {

@@ -4,6 +4,10 @@
     border-radius: 50px;
     background-color: #262626;
     display: block;
+    transition: 0.5s;
+}
+.superBoard:hover{
+    filter: brightness(90%);
 }
 .title{
     display: flex;
@@ -32,9 +36,6 @@
 }
 .iphone {
     width: 60%;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
 }
 
 .img{

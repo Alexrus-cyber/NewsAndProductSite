@@ -1,0 +1,62 @@
+
+.purple{
+    --green: #b185fb;
+    --black: #fff
+}
+.green{
+    --green: #b1ee41;
+    --black: #000
+}
+.board{
+    width: 50%;
+    background: var(--green);
+    color: var(--black);
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+.board:hover{
+    filter: brightness(90%);
+}
+.block {
+    display: block;
+}
+
+.upper{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    height: 50%;
+}
+.down{
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.img{
+    rotate: -45deg;
+    width: 30px;
+    margin-top: 20px;
+
+    cursor: pointer;
+}
+.upperTitle{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 35px;
+    width: 100%;
+    text-transform: uppercase;
+}
+.upperArrow{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}

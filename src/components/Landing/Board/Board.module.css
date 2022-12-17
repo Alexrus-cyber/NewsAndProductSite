@@ -4,6 +4,10 @@
     height: 45%;
     border-radius: 50px;
     display: flex;
+    transition: 0.5s;
+}
+.board:hover{
+    filter: brightness(90%);
 }
 .titleContainer{
     width: 40%;
