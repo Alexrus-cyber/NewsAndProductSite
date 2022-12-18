@@ -6,6 +6,7 @@ import {Header} from "./components/HeaderNav/Header";
 import {useAppDispatch, useAppSelector} from "./hooks/Hooks";
 import {action} from "./Redux/Reducers/MainReducer";
 import Preloader from "./Common/Preloader";
+import {CreateBoardContainer} from "./components/CreateBoard/CreateBoardContainer";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -26,6 +27,7 @@ function App() {
                 <Header/>
                 <Routes>
                     <Route path={"/"} element={<LandingContainer/>}></Route>
+                    <Route path={"/CreateBoard"} element={<CreateBoardContainer/>}></Route>
                 </Routes>
             </div>}
         </BrowserRouter>

@@ -26,7 +26,7 @@ export const Header = () => {
                     <NavLink className={scrolled ? styles.link + ' ' + styles.dark :  styles.link + ' '+ styles.light} to={"/"}>Products</NavLink>
                     <NavLink className={scrolled ? styles.link + ' ' + styles.dark :  styles.link + ' '+ styles.light} to={"/"}>App</NavLink>
                     <NavLink className={scrolled ? styles.link + ' ' + styles.dark :  styles.link + ' '+ styles.light} to={"/"}>About</NavLink>
-                    <NavLink className={scrolled ? styles.link + ' ' + styles.dark :  styles.link + ' '+ styles.light} to={"/"}>FAQ</NavLink>
+                    <NavLink className={scrolled ? styles.link + ' ' + styles.dark :  styles.link + ' '+ styles.light} to={"/CreateBoard"}>FAQ</NavLink>
 
                 </div>
                 <div className={styles.registerButtonsContainer}>
